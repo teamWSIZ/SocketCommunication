@@ -11,7 +11,7 @@ import java.net.Socket;
  */
 public class W {
     public static void main(String[] args) throws Exception {
-            InetAddress addr = InetAddress.getByName("10.11.12.13");
+            InetAddress addr = InetAddress.getByName("localhost");
             ServerSocket ss = new ServerSocket(22222, 50, addr);
             Socket s = ss.accept();
             System.out.println("połączenie nawiązano...");
