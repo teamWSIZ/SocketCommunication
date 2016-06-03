@@ -10,7 +10,7 @@ public class UdpListenerStarter {
 
             //Listening on broadcast address; cant have 2 threads on this...
             //todo: check on 2 separate OS'es in the subnet
-            new Thread(()->{new UdpListener("10.11.12.13").start();}).start();
+            new Thread(()->{new UdpListener("localhost").start();}).start();
         }
 
     }

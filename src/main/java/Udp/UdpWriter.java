@@ -10,11 +10,11 @@ public class UdpWriter {
     public static void main(String[] args) throws Exception {
         DatagramSocket ds = new DatagramSocket();
         ds.setBroadcast(true);
-        InetAddress ip = InetAddress.getByName("10.11.12.13");
+        InetAddress ip = InetAddress.getByName("localhost");
         byte[] data = "Abra kad..".getBytes();
         long st = System.currentTimeMillis();
         DatagramPacket packet = new DatagramPacket(data, data.length, ip, 11111);
-        for (int i = 0; i < 1e5; i++) {
+        for (int i = 0; i < 100000; i++) {
             ds.send(packet);
             waitFewMicroseconds();
         }
