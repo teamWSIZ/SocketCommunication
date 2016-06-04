@@ -26,7 +26,7 @@ public class W_wielokrotny {
             }
             count++;
             s.close();  //zamykamy połączenie
-            if (count%1000==0) System.out.println(count);
+            if (count%1000==0) System.out.println("Kolejne 1000 komunikacji wykonanych; łącznie:" + count);
         }
 
     }
